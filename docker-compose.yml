@@ -1,0 +1,29 @@
+
+services:
+  frontend:
+    build: ./client/inspiQuotes
+    ports:
+      - "5173:5173"
+    networks:
+      - inspiQuotes-network
+    
+
+  backend:
+    build: /server
+    ports:
+      - "3444:3444"
+    depends_on:
+      - mongo
+    networks:
+      - inspiQuotes-network
+
+  mongo:
+    image: mongo:latest
+    networks:
+      - inspiQuotes-network
+  
+networks:
+  inspiQuotes-network:
+    driver: bridge
+
+
