@@ -5,13 +5,15 @@ FROM node:20.2.0
 WORKDIR /app
 
 # Copy package.json and install dependencies
-COPY package*.json ./
+COPY package*.json .
 
 # Install dependencies
 RUN npm install
 
+RUN npm i -g serve
+
 # Expose port for the frontend
-EXPOSE 5173
+EXPOSE 5555
 
 
 # Copy the entire frontend codebase

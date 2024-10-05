@@ -3,9 +3,12 @@ services:
   frontend:
     build: ./client/inspiQuotes
     ports:
-      - "5173:5173"
+      - "5555:5555"
     networks:
       - inspiQuotes-network
+    depends_on:
+      - backend
+      - mongo
     
 
   backend:

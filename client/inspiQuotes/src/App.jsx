@@ -15,10 +15,10 @@ function App() {
             setAuthor(data.author)
         }
 
-    // useEffect(()=>{
-    //     fetchQuote()
+    useEffect(()=>{
+        fetchQuote()
 
-    // }, [])
+    }, [])
 
 
   return (
