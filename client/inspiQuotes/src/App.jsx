@@ -9,7 +9,7 @@ function App() {
 
 
     const fetchQuote = async() => {
-            const response = await fetch('https://inspiquotes.tessysolutions.site/api/quotes/quote')
+            const response = await fetch('https://api-inspiquotes.tessysolutions.site/api/quotes/quote')
             const data = await response.json()
             setQuote(data.quote)
             setAuthor(data.author)
